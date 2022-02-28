@@ -23,21 +23,24 @@
   <div class="box">
     <div class="top-section">
 
-      <div class="page-view">100k Pageviews</div>
-      <div class="price"><h1>$16.00</h1>/month</div>
+      <div class="price-box">
+        <div class="page-view"><p class="pageview-text">100K PAGEVIEWS</p></div>
+        <div class="price"><p><span>$<span class="price-text">16</span>.00</span> / month</p></div>
+        <input type="range" class="range-slider" id="myRange" min="1" max="5" value="3">
+      </div>
       
-      <input type="range" class="range-slider" id="myRange">
+      
 
       <div class="toggle-sec">
 
         <p>Monthly Billing</p>
 
         <label class="switch">
-          <input type="checkbox">
+          <input type="checkbox" class="checkbox" value=".25">
           <span class="slider round"></span>
         </label>
 
-       <p>Yearly Billing <span class="discount-text">25% discount</span></p> 
+       <p>Yearly Billing <span class="discount-text">25% discount</span><span class="discount-text mob">-25%</span></p> 
       </div>
 
     </div>

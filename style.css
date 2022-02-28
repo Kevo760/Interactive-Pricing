@@ -6,6 +6,7 @@ html {
     background-size: contain;
     height: 100%;
     width: 100%;
+    color: hsl(225, 20%, 60%);
 }
 
 * {
@@ -69,10 +70,41 @@ html {
     color: hsl(15, 100%, 70%);
     background-color: hsl(14, 92%, 95%);
     border-radius: 10px;
-    padding: .2em;
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+.mob {
+  display: none;
+}
+
+.price-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 1em;
+  padding: 1em;
+  justify-content: center;
+}
+
+.page-view {
+  width: 17em;
+}
+
+.page-view p {
+  display: block;
+  font-weight: bold;
+  margin-top: .8em;
+}
+
+.price span {
+  font-weight: bold;
+  font-size: 2rem;
+  color: black;
 }
 
 /* -------------- SLIDER ------------- */
+
 
 .range-slider {
     -webkit-appearance: none;
@@ -86,6 +118,8 @@ html {
     transition: opacity .2s;
     margin: 4em auto 4em auto;
   }
+
+
   
   .range-slider:hover {
     opacity: 1;
@@ -94,7 +128,7 @@ html {
   .range-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 23px;
+    width: 25px;
     height: 14px;
     border: 0;
     background-image: url('./images/icon-slider.svg');
@@ -103,7 +137,9 @@ html {
     background-color: hsl(174, 86%, 45%);
     cursor: pointer;
     border-radius: 50%;
-    padding: 1.2em;
+    padding: 1.5em;
+    box-shadow: 1px 15px 40px 5px hsl(174, 86%, 45%);
+
   }
   
   .range-slider::-moz-range-thumb {
@@ -118,8 +154,14 @@ html {
     background-color: hsl(174, 86%, 45%);
     cursor: pointer;
     border-radius: 50%;
-    padding: 1.2em;
+    padding: 1.5em;
+  
   }
+
+  
+
+
+
 
 /* -------------- TOGGLE ------------- */
 .switch {
@@ -210,6 +252,7 @@ button {
     background-color: hsl(227, 35%, 25%);
     color: hsl(226, 100%, 87%);
     cursor: pointer;
+    font-weight: bold;
 }
 
 button:hover {
@@ -217,3 +260,80 @@ button:hover {
 }
 
 /* ======================== BOTTOM SECTION ========================== */
+
+
+/* ################################ MOBILE ############################# */
+
+@media (max-width: 560px) {
+
+  html {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -25em;
+}
+
+  .top-text {
+    background-image: url('./images/pattern-circles.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1rem;
+    text-align: center;
+    margin: 3rem auto 1rem auto;
+}
+
+
+  .top-text p {
+    width: 14em;
+    display: block;
+    margin: 1em auto;
+  }
+
+  .top-section {
+    height: 22rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+    width: 25rem;
+    height: 35rem;
+    margin-bottom: 20em;
+}
+
+.page-view {
+  order: 1;
+  text-align: center;
+}
+
+.price {
+  order: 3;
+}
+
+.range-slider {
+  order: 2;
+}
+
+.toggle-sec {
+margin-top: 2em;
+}
+
+button {
+margin-top: -4.5em;
+}
+
+.discount-text {
+  display: none;
+}
+
+.mob {
+  display: inline;
+
+}
+
+}
+
+/* ################################ MOBILE ############################# */
